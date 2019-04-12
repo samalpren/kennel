@@ -1,11 +1,19 @@
-import { Route } from 'react-router-dom'
 import React, { Component } from "react"
-// import AnimalList from './animal/AnimalList'
+// import AnimalList from './animals/AnimalList'
 import LocationList from './location/LocationList'
 import EmployeeList from './employee/EmployeeList'
+import { Route } from 'react-router-dom'
 
 
 export default class ApplicationViews extends Component {
+
+     /*
+        Although you will eventually be pulling your objects
+        from your json-server API, for this chapter, we're
+        faking it and just creating those arrays in the component
+        itself
+    */
+
     employeesFromAPI = [
         { id: 1, name: "Jessica Younker" },
         { id: 2, name: "Jordan Nelson" },
@@ -30,22 +38,22 @@ export default class ApplicationViews extends Component {
     state = {
         employees: this.employeesFromAPI,
         locations: this.locationsFromAPI,
-        // animals: this.animalsFromAPI
+        animals: this.animalsFromAPI
     }
 
     render() {
-        return (
-            <React.Fragment>
-                <Route exact path="/" render={(props) => {
-                    return <LocationList locations={this.state.locations} />
-                }} />
-                {/* <Route path="/animals" render={(props) => {
-                    return <AnimalList animals={this.state.animals} />
-                }} /> */}
-                <Route path="/employees" render={(props) => {
-                    return <EmployeeList employees={this.state.employees} />
-                }} />
-            </React.Fragment>
-        )
+      return (
+        <React.Fragment>
+            <Route exact path="/" render={(props) => {
+                return <LocationList locations={this.state.locations} />
+            }} />
+            {/* <Route path="/animals" render={(props) => {
+                return <AnimalList animals={this.state.animals} />
+            }} /> */}
+            <Route path="/employees" render={(props) => {
+                return <EmployeeList employees={this.state.employees} />
+            }} />
+        </React.Fragment>
+      )
     }
 }
