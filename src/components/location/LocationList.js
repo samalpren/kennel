@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import "./location.css"
 
 export default class LocationList extends Component {
-  render() {
+  render(){
     return (
       <React.Fragment>
       <div>

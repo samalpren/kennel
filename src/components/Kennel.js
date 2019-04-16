@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews"
-import "./kennel.css"
+import "./Kennel.css"
 
 
 export default class Kennel extends Component {

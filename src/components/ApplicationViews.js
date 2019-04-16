@@ -1,4 +1,3 @@
-
 import React, { Component } from "react"
 import AnimalList from './animals/AnimalList'
 import LocationList from './location/LocationList'
